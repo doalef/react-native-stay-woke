@@ -19,4 +19,25 @@ public class RNReactNativeStayWokeModule extends ReactContextBaseJavaModule {
   public String getName() {
     return "RNReactNativeStayWoke";
   }
+
+  @ReactMethod
+  public void keepScreenAwake() {
+      Toast.makeText(getCurrentActivity().getApplicationContext(),"text",Toast.LENGTH_LONG).show();
+      getCurrentActivity().runOnUiThread(new Runnable() {
+          @Override
+          public void run() {
+              getCurrentActivity().getWindow().addFlags(android.view.WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+          }
+      });
+  }
+
+  @ReactMethod
+  public void removeScreenAwake() {
+      getCurrentActivity().runOnUiThread(new Runnable() {
+          @Override
+          public void run() {
+              getCurrentActivity().getWindow().clearFlags(android.view.WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+          }
+      });
+  }
 }

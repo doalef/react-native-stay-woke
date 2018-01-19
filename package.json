@@ -1,9 +1,9 @@
 
 {
-  "name": "react-native-react-native-stay-woke",
+  "name": "react-native-stay-woke",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "stayWoke.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,7 +14,7 @@
   "repository": {
     "url": "https://github.com/doalef/react-native-stay-woke.git"
   },
-  "license": "",
+  "license": "MIT",
   "peerDependencies": {
     "react-native": "^0.41.2",
     "react-native-windows": "0.41.0-rc.1"
